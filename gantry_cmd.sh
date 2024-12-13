@@ -6,4 +6,4 @@ CLUSTER="ai2/mosaic-cirrascale"
 BUDGET="ai2/oe-eval"
 
 # Run the gantry command
-gantry run --workspace "$WORKSPACE" --cluster "$CLUSTER" -- python run.py --budget "$BUDGET"
+gantry run --workspace "$WORKSPACE" --cluster "$CLUSTER" --budget "$BUDGET" -- python run.py 
