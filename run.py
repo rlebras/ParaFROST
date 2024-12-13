@@ -1,9 +1,15 @@
 import subprocess
 import os
 
-def install_cudatoolkit():
+def install_cuda():
     try:
         # Execute the apt-get command to install cudatoolkit
+        command = ['wget', 'https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2404/x86_64/cuda-keyring_1.1-1_all.deb']
+        result = subprocess.run(command, check=True, text=True, capture_output=True)
+        command = ['dpkg', '-i', 'cuda-keyring_1.1-1_all.deb']
+        result = subprocess.run(command, check=True, text=True, capture_output=True)
+        command = ['apt-get', 'update']
+        result = subprocess.run(command, check=True, text=True, capture_output=True)
         command = ['apt-get', '-y', 'install', 'cuda-toolkit-12-6']
         result = subprocess.run(command, check=True, text=True, capture_output=True)
 
@@ -75,6 +81,6 @@ def execute_parafrost():
         print(f"An unexpected error occurred: {e}")
 
 if __name__ == "__main__":
-    install_cudatoolkit()
+    install_cuda()
     execute_install_script()
     execute_parafrost()
