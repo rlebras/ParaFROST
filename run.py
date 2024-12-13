@@ -4,7 +4,7 @@ import os
 def install_cudatoolkit():
     try:
         # Execute the apt-get command to install cudatoolkit
-        command = ['sudo', 'apt-get', '-y', 'install', 'cuda-toolkit-12-6']
+        command = ['apt-get', '-y', 'install', 'cuda-toolkit-12-6']
         result = subprocess.run(command, check=True, text=True, capture_output=True)
 
         # Print the output from the command
