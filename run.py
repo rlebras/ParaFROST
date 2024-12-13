@@ -35,7 +35,7 @@ def execute_install_script():
 def execute_parafrost():
     try:
         # Define the command and arguments
-        command = ['parafrost', './cnf/simple.txt']
+        command = ['./build/cpu/bin/parafrost', './cnf/simple.txt']
 
         # Ensure the file exists
         file_path = './cnf/simple.txt'
