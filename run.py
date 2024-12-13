@@ -18,7 +18,7 @@ def execute_install_script():
             os.chmod(script_path, 0o755)
 
         # Run the script with the -g argument
-        result = subprocess.run([script_path, '-g'], check=True, text=True, capture_output=True)
+        result = subprocess.run([script_path, '-g'], check=True, text=True)
 
         # Print the output from the script
         print("Script executed successfully.")
