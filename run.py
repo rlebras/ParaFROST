@@ -1,6 +1,15 @@
 import subprocess
 import os
 
+def list_files_and_subfiles(directory="."):
+    for root, dirs, files in os.walk(directory):
+        print(f"Directory: {root}")
+        for file in files:
+            print(f"  File: {file}")
+        for subdir in dirs:
+            print(f"  Subdirectory: {subdir}")
+
+
 def execute_install_script():
     try:
         # Ensure the script is executable
@@ -26,7 +35,7 @@ def execute_install_script():
 def execute_parafrost():
     try:
         # Define the command and arguments
-        command = ['bin/parafrost', './cnf/simple.txt']
+        command = ['parafrost', './cnf/simple.txt']
 
         # Ensure the file exists
         file_path = './cnf/simple.txt'
@@ -49,4 +58,5 @@ def execute_parafrost():
 
 if __name__ == "__main__":
     execute_install_script()
+    list_files_and_subfiles()
     execute_parafrost()
