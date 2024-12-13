@@ -18,7 +18,7 @@ def execute_install_script():
             os.chmod(script_path, 0o755)
 
         # Run the script with the -g argument
-        result = subprocess.run([script_path, '-c'], check=True, text=True, capture_output=True)
+        result = subprocess.run([script_path, '-g'], check=True, text=True, capture_output=True)
 
         # Print the output from the script
         print("Script executed successfully.")
@@ -35,7 +35,7 @@ def execute_install_script():
 def execute_parafrost():
     try:
         # Define the command and arguments
-        command = ['./build/cpu/bin/parafrost', './cnf/simple.txt']
+        command = ['./build/gpu/bin/parafrost', './cnf/simple.txt']
 
         # Ensure the file exists
         file_path = './cnf/simple.txt'
@@ -58,5 +58,4 @@ def execute_parafrost():
 
 if __name__ == "__main__":
     execute_install_script()
-    list_files_and_subfiles()
     execute_parafrost()
