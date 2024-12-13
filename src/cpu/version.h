@@ -26,3 +26,7 @@ namespace ParaFROST {
 	const char* date();
 
 }
+#define VERSION "3.2.5"
+#define OSYSTEM "darwin ronan-bras-macbook-pro 21.6.0 arm64"
+#define DATE "Fri Dec 13 13:48:57 PST 2024"
+#define COMPILER "Apple clang version 14.0.0 (clang-1400.0.29.102)"
