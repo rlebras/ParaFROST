@@ -28,4 +28,4 @@ namespace ParaFROST {
 }
 #define VERSION "3.2.5"
 #define OSYSTEM "darwin ronan-bras-macbook-pro 21.6.0 arm64"
-#define DATE "Fri Dec 13 14:13:08 PST 2024"
+#define DATE "Fri Dec 13 14:24:31 PST 2024"
