@@ -168,7 +168,7 @@ if __name__ == "__main__":
     graph_gpu = find_graph_no_triangle_no_I10_gpu(
         num_vertices=n,
         edge_prob=0.45,
-        max_tries=1000000,
+        max_tries=10000000,
         seed=42
     )
 
