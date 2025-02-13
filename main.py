@@ -19,7 +19,7 @@ def generate_random_graph_gpu(num_vertices, edge_prob=0.5, seed=None):
     # Create a random matrix of shape (n, n) on GPU with uniform(0,1)
     # Then threshold it at edge_prob to decide edges (0/1).
     # We'll store it as an integer (0 or 1).
-    A = (torch.rand((num_vertices, num_vertices), device='cuda') < edge_prob).int()
+    A = (torch.rand((num_vertices, num_vertices), device='cuda') < edge_prob).float()
 
     # Symmetrize for an undirected graph
     # We'll do A = A OR A^T (logical or). But since it's 0/1, we can do max.
