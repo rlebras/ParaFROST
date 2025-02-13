@@ -4,8 +4,7 @@ import os
 def install_glucose():
     try:
         # Execute the apt-get command to install cudatoolkit
-        command = ['cd', './glucose/parallel']
-        result = subprocess.run(command, check=True, text=True, capture_output=True)
+        os.chdir('./glucose/parallel')
         command = ['make', 'rs']
         result = subprocess.run(command, check=True, text=True, capture_output=True)
 
