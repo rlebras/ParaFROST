@@ -161,14 +161,14 @@ def save_to_json_gpu(G_gpu, filename="graph_40_gpu.json"):
 ########################
 
 if __name__ == "__main__":
-    n =30
+    n = 800
     # Example usage:
     # We'll do up to 100 attempts, each time generating a random graph with p=0.45.
     # For 40 vertices, you might want to tweak p or increase max_tries if it's not found quickly.
     graph_gpu = find_graph_no_triangle_no_I10_gpu(
         num_vertices=n,
-        edge_prob=0.45,
-        max_tries=10000000,
+        edge_prob=0.50,
+        max_tries=1000,
         seed=42
     )
 
