@@ -6,4 +6,4 @@ CLUSTER="ai2/jupiter-cirrascale-2"
 BUDGET="ai2/oe-eval"
 
 # Run the gantry command
-gantry run --gpus 8 --workspace "$WORKSPACE" --cluster "$CLUSTER" --budget "$BUDGET" -- python glucose.py
+gantry run --gpus 1 --workspace "$WORKSPACE" --cluster "$CLUSTER" --budget "$BUDGET" -- python glucose.py
