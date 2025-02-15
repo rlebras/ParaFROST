@@ -2,7 +2,7 @@ import torch
 import argparse
 import itertools
 import random
-
+import numpy
 
 def sample_subsets(n, subset_size, num_samples):
     """
