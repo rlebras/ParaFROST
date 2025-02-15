@@ -81,7 +81,7 @@ def check_if(v, l):
 
 def main():
     # Create two integer variables x and y
-    n = 500
+    n = 450
     k = 6
     x = [Int('x'+str(i+1)) for i in range(n)]
 
