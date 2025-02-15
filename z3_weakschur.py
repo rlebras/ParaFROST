@@ -186,6 +186,7 @@ def main():
             v = int(str(m[x[i]]))-1
             l[v].append(i+1)
             forced_assignment.append(v+1)
+        print(l)
 
         for i in range(n):
             s.push()
