@@ -6,4 +6,4 @@ CLUSTER="ai2/saturn-cirrascale"
 BUDGET="ai2/oe-eval"
 
 # Run the gantry command
-gantry run --preemptible --gpus 1 --workspace "$WORKSPACE" --cluster "$CLUSTER" --budget "$BUDGET" -- python z3_weakschur.py
+gantry run --name ws600 --preemptible --gpus 1 --workspace "$WORKSPACE" --cluster "$CLUSTER" --budget "$BUDGET" -- python z3_weakschur.py

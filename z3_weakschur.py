@@ -157,7 +157,7 @@ def main():
 
     for i in range(n):
         v = i+1
-        row_index = check_if(v, WS_5)
+        row_index = check_if(v, WS_6)
         if row_index is not None:
             print("in it!", v, row_index)
             s.add(x[i] == row_index+1)
