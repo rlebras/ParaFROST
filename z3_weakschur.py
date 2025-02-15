@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import argparse
 
 from z3 import *
 
@@ -80,9 +81,17 @@ def check_if(v, l):
 
 
 def main():
-    # Create two integer variables x and y
-    n = 450
-    k = 6
+    parser = argparse.ArgumentParser(description="Weak Schur parameters")
+
+    # Define arguments
+    parser.add_argument("-n", type=int, required=True, help="Value for n")
+    parser.add_argument("-k", type=int, required=True, help="Value for k")
+
+    args = parser.parse_args()  # parse the command-line arguments
+
+    n = args.n
+    k = args.k
+
     x = [Int('x'+str(i+1)) for i in range(n)]
 
     # Create a solver instance
