@@ -2,7 +2,7 @@
 
 # Set the workspace and cluster variables
 WORKSPACE="ronanlb-workspace-internal"
-CLUSTER="ai2/augusta-google-1"
+CLUSTER="ai2/saturn-cirrascale"
 BUDGET="ai2/oe-eval"
 
 # Run the gantry command
