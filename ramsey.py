@@ -162,9 +162,9 @@ if __name__ == "__main__":
     t = args.t
 
     adj_matrix = run_gradient_search(n, s, t,
-                                     s_subsets_per_iter=100,
-                                     t_subsets_per_iter=100,
+                                     s_subsets_per_iter=200,
+                                     t_subsets_per_iter=200,
                                      lr=0.02,
-                                     iters=10000)
+                                     iters=20000)
     print("Final adjacency matrix (rounded):")
     print(adj_matrix)
